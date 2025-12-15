@@ -6,7 +6,6 @@ PBP E - Tugas 12 Susulan Flutter
 
 Aplikasi pemesanan makanan dan minuman menggunakan **Flutter** dengan **Firebase Cloud Firestore** sebagai backend database real-time.
 
-![App Preview](screenshots/Screenshot%202025-12-15%20103712.png)
 
 ## ✨ Fitur Utama
 
@@ -222,25 +221,6 @@ Data keranjang disimpan menggunakan **SharedPreferences**:
 }
 ```
 
-## 🎯 Fitur Yang Akan Datang
-
-- [ ] Authentication (Login/Register)
-- [ ] Order History
-- [ ] Payment Integration
-- [ ] Admin Dashboard
-- [ ] Real-time Order Tracking
-- [ ] Push Notifications
-- [ ] Rating & Review System
-
-## 🤝 Kontribusi
-
-Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request.
-
-1. Fork repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
 
 ## 📝 License
 
