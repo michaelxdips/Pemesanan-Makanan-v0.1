@@ -34,15 +34,15 @@ Aplikasi pemesanan makanan dan minuman menggunakan **Flutter** dengan **Firebase
 ## 📸 Screenshots
 
 ### Menu Utama
-![Menu List](screenshots/Screenshot%202025-12-15%20103712.png)
+![Menu List](screenshots/Screenshot%202025-12-15%20104214.png)
 *Daftar menu lengkap dengan gambar HD, kategori, dan harga*
 
 ### Keranjang Belanja
-![Shopping Cart](screenshots/Screenshot%202025-12-15%20103728.png)
+![Shopping Cart](screenshots/Screenshot%202025-12-15%20103712.png)
 *Keranjang dengan detail item, quantity control, dan breakdown biaya*
 
 ### Detail Checkout
-![Checkout Detail](screenshots/Screenshot%202025-12-15%20104214.png)
+![Checkout Detail](screenshots/Screenshot%202025-12-15%20103728.png)
 *Rincian lengkap biaya termasuk service charge dan pajak*
 
 ## 🚀 Quick Start
