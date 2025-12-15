@@ -43,6 +43,7 @@ class CartProvider with ChangeNotifier {
 
   /// Load keranjang dari local storage saat inisialisasi
   Future<void> loadCart() async {
+    debugPrint('🔄 CartProvider: Loading cart...');
     _isLoading = true;
     notifyListeners();
 
@@ -50,10 +51,11 @@ class CartProvider with ChangeNotifier {
       _cartItems = await _localStorage.loadCart();
       // Sort berdasarkan waktu ditambahkan (terbaru di atas)
       _cartItems.sort((a, b) => a.addedAt.compareTo(b.addedAt));
+      debugPrint('✅ CartProvider: Loaded ${_cartItems.length} items');
       _isLoading = false;
       notifyListeners();
     } catch (e) {
-      debugPrint('Error loading cart: $e');
+      debugPrint('❌ CartProvider: Error loading cart: $e');
       _isLoading = false;
       notifyListeners();
     }
@@ -108,9 +110,11 @@ class CartProvider with ChangeNotifier {
   /// Simpan keranjang ke local storage
   Future<void> _saveCart() async {
     try {
+      debugPrint('💾 Saving cart: ${_cartItems.length} items');
       await _localStorage.saveCart(_cartItems);
+      debugPrint('✅ Cart saved successfully');
     } catch (e) {
-      debugPrint('Error saving cart: $e');
+      debugPrint('❌ Error saving cart: $e');
     }
   }
 
