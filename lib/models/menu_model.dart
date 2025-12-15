@@ -33,7 +33,7 @@ class MenuModel {
     return MenuModel(
       id: json['id'] as String,
       namaMenu: json['namaMenu'] as String,
-      imageUrl: json['imageUrl'] ?? json['gambar'] as String,  // Support both
+      imageUrl: (json['imageUrl'] ?? json['gambar'] ?? '') as String,  // Support both with fallback
       harga: (json['harga'] as num).toDouble(),
       kategori: json['kategori'] as String,
       urutanTampil: json['urutanTampil'] as int,
