@@ -1,3 +1,7 @@
+Nama: Stephen Michael Sirait
+NIM: 24060123140193
+PBP E - Tugas 12 Susulan Flutter
+
 # Pemesanan Makanan v0.1
 
 Aplikasi pemesanan makanan dan minuman menggunakan **Flutter** dengan **Firebase Cloud Firestore** sebagai backend database real-time.
@@ -44,10 +48,14 @@ Aplikasi pemesanan makanan dan minuman menggunakan **Flutter** dengan **Firebase
 
 ## 🚀 Quick Start
 
+<<<<<<< HEAD
 ### Prerequisites
 - Flutter SDK (3.0+)
 - Firebase Account (Free tier)
 - Edge/Chrome Browser atau Android Emulator
+=======
+### 1. Setup Firebase
+>>>>>>> 8edf174166b029d8ce82470b6b9fdadc26087b6e
 
 ### 1. Clone Repository
 
@@ -116,6 +124,7 @@ flutter run -d chrome
 
 ```
 lib/
+<<<<<<< HEAD
 ├── models/
 │   ├── cart_item.dart          # Model item keranjang
 │   └── menu_model.dart         # Model menu
@@ -139,6 +148,16 @@ tools/
 android/
 └── app/
     └── google-services.json    # Firebase Android config
+=======
+├── models/          # Model data
+├── services/        # Services (cloud & local storage)
+├── providers/       # State management<img width="1918" height="891" alt="Screenshot 2025-12-15 103728" src="https://github.com/user-attachments/assets/2b52c156-7cc3-40d2-be77-89c0e695103c" />
+<img width="1918" height="885" alt="Screenshot 2025-12-15 104214" src="https://github.com/user-attachments/assets/cb553047-411e-4db2-9c22-90b5daad6a7c" />
+<img width="1918" height="889" alt="Screenshot 2025-12-15 103712" src="https://github.com/user-attachments/assets/102f65f3-0ae6-40b5-be80-c715bfbefeee" />
+
+├── screens/         # Halaman UI
+└── main.dart       # Entry point
+>>>>>>> 8edf174166b029d8ce82470b6b9fdadc26087b6e
 ```
 
 ## 🛠️ Teknologi Stack
