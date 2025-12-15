@@ -12,9 +12,14 @@ class CartLocalStorage {
       final prefs = await SharedPreferences.getInstance();
       final cartJson = cartItems.map((item) => item.toJson()).toList();
       final cartString = jsonEncode(cartJson);
-      await prefs.setString(_cartKey, cartString);
-      print('✅ Cart saved: ${cartItems.length} items');
-      print('📦 Cart data: $cartString');
+      final success = await prefs.setString(_cartKey, cartString);
+      print('💾 Attempting to save cart: ${cartItems.length} items');
+      print('📦 Cart data: ${cartString.substring(0, cartString.length > 100 ? 100 : cartString.length)}...');
+      print('✅ Save result: $success');
+      
+      // Verify save by reading it back
+      final verifyData = prefs.getString(_cartKey);
+      print('🔍 Verification read: ${verifyData != null ? "Data found" : "NO DATA"}');
     } catch (e) {
       print('❌ Error saving cart: $e');
       throw Exception('Gagal menyimpan keranjang: $e');

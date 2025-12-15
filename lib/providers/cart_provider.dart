@@ -9,15 +9,25 @@ class CartProvider with ChangeNotifier {
 
   List<CartItem> _cartItems = [];
   bool _isLoading = false;
+  bool _isInitialized = false;
 
   /// Constructor - auto load cart saat inisialisasi
   CartProvider() {
-    loadCart();
+    _initializeCart();
+  }
+
+  /// Initialize cart dengan proper async handling
+  Future<void> _initializeCart() async {
+    debugPrint('🔄 CartProvider: Initializing...');
+    await loadCart();
+    _isInitialized = true;
+    debugPrint('✅ CartProvider: Initialization complete');
   }
 
   // Getters
   List<CartItem> get cartItems => _cartItems;
   bool get isLoading => _isLoading;
+  bool get isInitialized => _isInitialized;
   int get itemCount => _cartItems.length;
   int get totalItems => _cartItems.fold(0, (sum, item) => sum + item.quantity);
 

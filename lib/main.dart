@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'firebase_options.dart';
 import 'providers/menu_provider.dart';
 import 'providers/cart_provider.dart';
@@ -8,9 +9,21 @@ import 'screens/menu_list_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  
+  // Pre-initialize SharedPreferences for web compatibility
+  try {
+    final prefs = await SharedPreferences.getInstance();
+    debugPrint('✅ SharedPreferences initialized');
+    debugPrint('📦 Stored keys: ${prefs.getKeys()}');
+  } catch (e) {
+    debugPrint('⚠️ SharedPreferences init error: $e');
+  }
+  
   runApp(const MyApp());
 }
 
